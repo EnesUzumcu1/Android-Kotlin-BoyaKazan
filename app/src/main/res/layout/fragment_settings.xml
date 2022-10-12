@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clOyuncu1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/clOyuncu2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/oyuncu1Baslik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Oyuncu 1"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/oyuncu1adiEditText"
+            style="@style/Widget.Design.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterEnabled="true"
+            app:counterMaxLength="15"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/oyuncu1Baslik">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etOyuncu1adi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Oyuncu 1 Adı Girin"
+                android:inputType="text"
+                android:maxLength="15"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TableLayout
+            android:id="@+id/solTarafTableLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/oyuncu1adiEditText">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnOyuncu1Renk1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/custom_button_lime" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnOyuncu1Renk2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/custom_button_gray" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnOyuncu1Renk3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/custom_button_black" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnOyuncu1Renk4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/custom_button_green" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnOyuncu1Renk5"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/custom_button_orange" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnOyuncu1Renk6"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/custom_button_red" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnOyuncu1Renk7"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/custom_button_blue" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnOyuncu1Renk8"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/custom_button_brown" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnOyuncu1Renk9"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/custom_button_yellow"
+
+                    />
+            </TableRow>
+
+        </TableLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSecilenOyuncu1Rengi"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/solTarafTableLayout"
+            tools:background="@drawable/custom_button_black" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oyuncu 1 Rengi →"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/ivSecilenOyuncu1Rengi"
+            app:layout_constraintEnd_toStartOf="@id/ivSecilenOyuncu1Rengi"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivSecilenOyuncu1Rengi" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clOyuncu2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/clOyuncu1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/oyuncu2Baslik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Oyuncu 2"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/oyuncu2adiEditText"
+            style="@style/Widget.Design.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterEnabled="true"
+            app:counterMaxLength="15"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/oyuncu2Baslik">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etOyuncu2adi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Oyuncu 2 Adı Girin"
+                android:inputType="text"
+                android:maxLength="15"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TableLayout
+            android:id="@+id/sagTarafTableLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/oyuncu2adiEditText">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnOyuncu2Renk1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/custom_button_lime" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnOyuncu2Renk2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/custom_button_gray" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnOyuncu2Renk3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/custom_button_black" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnOyuncu2Renk4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/custom_button_green" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnOyuncu2Renk5"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/custom_button_orange" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnOyuncu2Renk6"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/custom_button_red" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnOyuncu2Renk7"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/custom_button_blue" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnOyuncu2Renk8"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/custom_button_brown" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnOyuncu2Renk9"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/custom_button_yellow" />
+            </TableRow>
+
+        </TableLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSecilenOyuncu2Rengi"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sagTarafTableLayout"
+            tools:background="@drawable/custom_button_red" />
+
+        <!-- app:layout_constrainedWidth="true" bu komut sayesinde view ekran disina cikmiyor.
+         textview yazısı asagi satıra kayiyor  -->
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← Oyuncu 2 Rengi"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/ivSecilenOyuncu2Rengi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/ivSecilenOyuncu2Rengi"
+            app:layout_constraintTop_toTopOf="@id/ivSecilenOyuncu2Rengi" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/kaydetButon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="KAYDET"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

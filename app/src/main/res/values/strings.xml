@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">BoyaKazan</string>
+    <string name="lime">lime</string>
+    <string name="gray">gray</string>
+    <string name="black">black</string>
+    <string name="green">green</string>
+    <string name="orange">orange</string>
+    <string name="red">red</string>
+    <string name="blue">blue</string>
+    <string name="brown">brown</string>
+    <string name="yellow">yellow</string>
+    <string name="aciklama1">Oyunumuz ekranın üstünde bulunan 10 adet butonla oynanmaktadır.</string>
+    <string name="aciklama2">Ayarlar sayfasından oyuncu isimleri ve renklerini belirleyebilirsiniz.</string>
+    <string name="aciklama3">Her butona tıklamada sıra diğer oyuncuya geçer.</string>
+    <string name="aciklama4">Tıklanan butonun en altında bulunan ve boyanmamış en alt satırdan itibaren boyanmaya başlanır.</string>
+    <string name="aciklama5">Oyunu kazanmak için aynı renkten 4 kare DİKEY,</string>
+    <string name="aciklama6">Çapraz,</string>
+    <string name="aciklama7">Çapraz,</string>
+    <string name="aciklama8">Veya Yatay konumda olmalıdır.</string>
+    <string name="aciklama9">Bir oyuncu 4\'lüsünü yapınca oyun biter ve kazananın ismi yazar.</string>
 </resources>

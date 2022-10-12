@@ -1,110 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".oyunEkrani">
+    tools:context=".GameFragment">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clOyuncu1"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_margin="2dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="5dp"
-        android:baselineAligned="false"
-        android:orientation="horizontal">
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="#03FFFFFF"
+        app:layout_constraintEnd_toStartOf="@id/clOyuncu2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <RelativeLayout
-            android:id="@+id/oyuncu1RelativeLayout"
-            android:layout_width="0dp"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivOyuncu1Rengi"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@drawable/custom_button_black" />
+
+        <TextView
+            android:id="@+id/oyuncu1AdiTextview"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#03FFFFFF">
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivOyuncu1Rengi"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Oyuncu 1" />
 
-            <Button
-                android:id="@+id/oyuncu1RengiButonu"
-                android:layout_width="30dp"
-                android:layout_height="30dp" />
-
-            <TextView
-                android:id="@+id/oyuncu1AdiTextview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toEndOf="@id/oyuncu1RengiButonu"
-                android:layout_toRightOf="@id/oyuncu1RengiButonu"
-                android:text="TextView"
-                android:textColor="@color/black" />
-
-            <ImageView
-                android:id="@+id/oyuncu1SiraImageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toEndOf="@id/oyuncu1AdiTextview"
-                android:layout_toRightOf="@id/oyuncu1AdiTextview"
-                app:srcCompat="@drawable/ic_baseline_arrow_left"
-                tools:ignore="VectorDrawableCompat" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/oyuncu2RelativeLayout"
-            android:layout_width="0dp"
+        <ImageView
+            android:id="@+id/oyuncu1SiraImageView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/oyuncu1AdiTextview"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_arrow_left"
+            tools:ignore="VectorDrawableCompat" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <ImageView
-                android:id="@+id/oyuncu2SiraImageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toStartOf="@id/oyuncu2AdiTextview"
-                android:layout_toLeftOf="@id/oyuncu2AdiTextview"
-                app:srcCompat="@drawable/ic_baseline_arrow_right"
-                tools:ignore="VectorDrawableCompat" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clOyuncu2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/clOyuncu1"
+        app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/oyuncu2AdiTextview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toStartOf="@id/oyuncu2RengiButonu"
-                android:layout_toLeftOf="@id/oyuncu2RengiButonu"
-                android:text="TextView"
-                android:textColor="@color/black" />
+        <ImageView
+            android:id="@+id/oyuncu2SiraImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/oyuncu2AdiTextview"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_arrow_right"
+            tools:ignore="VectorDrawableCompat" />
 
-            <Button
-                android:id="@+id/oyuncu2RengiButonu"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true" />
-        </RelativeLayout>
+        <TextView
+            android:id="@+id/oyuncu2AdiTextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivOyuncu2Rengi"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Oyuncu 2" />
 
-    </LinearLayout>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivOyuncu2Rengi"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@drawable/custom_button_red" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <TableLayout
         android:id="@+id/tableLayoutHersey"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/linearLayout"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:visibility="visible">
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonGeriAl">
 
         <TableRow
             android:id="@+id/butonlarSatiri"
@@ -781,13 +776,17 @@
         android:id="@+id/buttonGeriAl"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_above="@id/tableLayoutHersey"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:background="#FFFFFF"
         android:lineSpacingExtra="34sp"
         android:text="Geri Al"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/clOyuncu1"
+        app:layout_constraintBottom_toBottomOf="@id/clOyuncu1"/>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
