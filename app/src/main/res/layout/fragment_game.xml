@@ -95,17 +95,16 @@
         android:id="@+id/tableLayoutHersey"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonGeriAl">
+        app:layout_constraintTop_toBottomOf="@+id/buttonGeriAl">
 
         <TableRow
             android:id="@+id/butonlarSatiri"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="0.12">
 
             <Button
                 android:id="@+id/sutun1"
@@ -165,7 +164,7 @@
 
             <Button
                 android:id="@+id/sutun8"
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/buton_custom"
@@ -193,95 +192,75 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-            <Button
-                android:id="@+id/button10"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv10"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button11"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv11"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button12"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv12"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button13"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv13"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button14"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv14"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button15"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv15"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button16"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv16"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button17"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv17"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button18"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
-
-            <Button
-                android:id="@+id/button19"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv18"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv19"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1" />
 
         </TableRow>
 
@@ -290,95 +269,75 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-            <Button
-                android:id="@+id/button20"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv20"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button21"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv21"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button22"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv22"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button23"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv23"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button24"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv24"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button25"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv25"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button26"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv26"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button27"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv27"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button28"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
-
-            <Button
-                android:id="@+id/button29"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv28"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv29"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1" />
 
         </TableRow>
 
@@ -387,95 +346,75 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-            <Button
-                android:id="@+id/button30"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv30"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button31"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv31"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button32"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv32"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button33"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv33"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button34"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv34"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button35"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv35"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button36"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv36"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button37"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv37"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button38"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
-
-            <Button
-                android:id="@+id/button39"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv38"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv39"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1" />
 
         </TableRow>
 
@@ -484,95 +423,75 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-            <Button
-                android:id="@+id/button40"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv40"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button41"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv41"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button42"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv42"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button43"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv43"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button44"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv44"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button45"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv45"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button46"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv46"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button47"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv47"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button48"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
-
-            <Button
-                android:id="@+id/button49"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv48"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv49"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1" />
 
         </TableRow>
 
@@ -581,95 +500,75 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-            <Button
-                android:id="@+id/button50"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv50"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button51"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv51"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button52"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv52"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button53"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv53"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button54"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv54"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button55"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv55"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button56"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv56"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button57"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv57"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button58"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
-
-            <Button
-                android:id="@+id/button59"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv58"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv59"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1" />
 
         </TableRow>
 
@@ -678,95 +577,75 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-            <Button
-                android:id="@+id/button60"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv60"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button61"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv61"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button62"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv62"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button63"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv63"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button64"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv64"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button65"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv65"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button66"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv66"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button67"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv67"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button68"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
-
-            <Button
-                android:id="@+id/button69"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv68"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
-                android:enabled="false" />
+                android:layout_weight="1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv69"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1" />
 
         </TableRow>
 
@@ -784,9 +663,9 @@
         android:lineSpacingExtra="34sp"
         android:text="Geri Al"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@id/clOyuncu1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/clOyuncu1"
-        app:layout_constraintBottom_toBottomOf="@id/clOyuncu1"/>
+        app:layout_constraintTop_toTopOf="@id/clOyuncu1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

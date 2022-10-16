@@ -18,4 +18,6 @@
     <string name="aciklama7">Çapraz,</string>
     <string name="aciklama8">Veya Yatay konumda olmalıdır.</string>
     <string name="aciklama9">Bir oyuncu 4\'lüsünü yapınca oyun biter ve kazananın ismi yazar.</string>
+    <string name="beraberlik">Beraberlik</string>
+    <string name="galibiyet">Galibiyet</string>
 </resources>

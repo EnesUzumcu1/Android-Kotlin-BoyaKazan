@@ -8,7 +8,7 @@ import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.addCallback
 import androidx.appcompat.app.AlertDialog
@@ -58,12 +58,16 @@ class GameFragment : Fragment() {
     private lateinit var oyuncu1RengiStr: String
     private lateinit var oyuncu2RengiStr: String
     private var geriTusuBasilisSuresi: Long = 0
-    private lateinit var koordinatlar: Array<Array<Button>>
+    private lateinit var koordinatlar: Array<Array<ImageView>>
     private var kazananOyuncu: String? = null
     private var oyuncu1Ad: String = "Oyuncu 1"
     private var oyuncu2Ad: String = "Oyuncu 2"
     private lateinit var koordinatKaydediciArray: ArrayList<ArrayList<Int>>
     private var isBuilderExisting: Boolean = false
+
+    //max tiklanma sayisi ulasmasina ragmen oyun bitmediyse beraberlik vermek icin sayici olusturuldu
+    private var clickCount: Int = 0
+    private var maxClickCount: Int = 60
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -209,76 +213,76 @@ class GameFragment : Fragment() {
         //2 boyutlu bir array olusturuluyor ve viewler sirasina gore ataniyor (10 genislik 6 yukseklik)
         koordinatlar = arrayOf(
             arrayOf(
-                bindingGameFragment.button10,
-                bindingGameFragment.button11,
-                bindingGameFragment.button12,
-                bindingGameFragment.button13,
-                bindingGameFragment.button14,
-                bindingGameFragment.button15,
-                bindingGameFragment.button16,
-                bindingGameFragment.button17,
-                bindingGameFragment.button18,
-                bindingGameFragment.button19
+                bindingGameFragment.iv10,
+                bindingGameFragment.iv11,
+                bindingGameFragment.iv12,
+                bindingGameFragment.iv13,
+                bindingGameFragment.iv14,
+                bindingGameFragment.iv15,
+                bindingGameFragment.iv16,
+                bindingGameFragment.iv17,
+                bindingGameFragment.iv18,
+                bindingGameFragment.iv19
             ),
             arrayOf(
-                bindingGameFragment.button20,
-                bindingGameFragment.button21,
-                bindingGameFragment.button22,
-                bindingGameFragment.button23,
-                bindingGameFragment.button24,
-                bindingGameFragment.button25,
-                bindingGameFragment.button26,
-                bindingGameFragment.button27,
-                bindingGameFragment.button28,
-                bindingGameFragment.button29
+                bindingGameFragment.iv20,
+                bindingGameFragment.iv21,
+                bindingGameFragment.iv22,
+                bindingGameFragment.iv23,
+                bindingGameFragment.iv24,
+                bindingGameFragment.iv25,
+                bindingGameFragment.iv26,
+                bindingGameFragment.iv27,
+                bindingGameFragment.iv28,
+                bindingGameFragment.iv29
             ),
             arrayOf(
-                bindingGameFragment.button30,
-                bindingGameFragment.button31,
-                bindingGameFragment.button32,
-                bindingGameFragment.button33,
-                bindingGameFragment.button34,
-                bindingGameFragment.button35,
-                bindingGameFragment.button36,
-                bindingGameFragment.button37,
-                bindingGameFragment.button38,
-                bindingGameFragment.button39
+                bindingGameFragment.iv30,
+                bindingGameFragment.iv31,
+                bindingGameFragment.iv32,
+                bindingGameFragment.iv33,
+                bindingGameFragment.iv34,
+                bindingGameFragment.iv35,
+                bindingGameFragment.iv36,
+                bindingGameFragment.iv37,
+                bindingGameFragment.iv38,
+                bindingGameFragment.iv39
             ),
             arrayOf(
-                bindingGameFragment.button40,
-                bindingGameFragment.button41,
-                bindingGameFragment.button42,
-                bindingGameFragment.button43,
-                bindingGameFragment.button44,
-                bindingGameFragment.button45,
-                bindingGameFragment.button46,
-                bindingGameFragment.button47,
-                bindingGameFragment.button48,
-                bindingGameFragment.button49
+                bindingGameFragment.iv40,
+                bindingGameFragment.iv41,
+                bindingGameFragment.iv42,
+                bindingGameFragment.iv43,
+                bindingGameFragment.iv44,
+                bindingGameFragment.iv45,
+                bindingGameFragment.iv46,
+                bindingGameFragment.iv47,
+                bindingGameFragment.iv48,
+                bindingGameFragment.iv49
             ),
             arrayOf(
-                bindingGameFragment.button50,
-                bindingGameFragment.button51,
-                bindingGameFragment.button52,
-                bindingGameFragment.button53,
-                bindingGameFragment.button54,
-                bindingGameFragment.button55,
-                bindingGameFragment.button56,
-                bindingGameFragment.button57,
-                bindingGameFragment.button58,
-                bindingGameFragment.button59
+                bindingGameFragment.iv50,
+                bindingGameFragment.iv51,
+                bindingGameFragment.iv52,
+                bindingGameFragment.iv53,
+                bindingGameFragment.iv54,
+                bindingGameFragment.iv55,
+                bindingGameFragment.iv56,
+                bindingGameFragment.iv57,
+                bindingGameFragment.iv58,
+                bindingGameFragment.iv59
             ),
             arrayOf(
-                bindingGameFragment.button60,
-                bindingGameFragment.button61,
-                bindingGameFragment.button62,
-                bindingGameFragment.button63,
-                bindingGameFragment.button64,
-                bindingGameFragment.button65,
-                bindingGameFragment.button66,
-                bindingGameFragment.button67,
-                bindingGameFragment.button68,
-                bindingGameFragment.button69
+                bindingGameFragment.iv60,
+                bindingGameFragment.iv61,
+                bindingGameFragment.iv62,
+                bindingGameFragment.iv63,
+                bindingGameFragment.iv64,
+                bindingGameFragment.iv65,
+                bindingGameFragment.iv66,
+                bindingGameFragment.iv67,
+                bindingGameFragment.iv68,
+                bindingGameFragment.iv69
             )
         )
         //butun viewlerin background degistiliyor
@@ -315,10 +319,13 @@ class GameFragment : Fragment() {
                 }
                 //hamle geri alindiktan sonra arrayden silindi
                 koordinatKaydediciArray.removeAt(koordinatKaydediciArray.size - 1)
+                //hamel geri alininca tiklama sayisida azaltiliyor
+                clickCount--
             }
         }
         //sutundaki yukseklik -1 den buyuksek mevcut sutun yerindeki viewin backgroundunu degistirir.
         bindingGameFragment.sutun1.setOnClickListener {
+
             if (sutun1yeri > -1) {
                 //hamle kaydedildi.
                 koordinatKaydediciArray.add(
@@ -346,7 +353,9 @@ class GameFragment : Fragment() {
                 renkDegis++
                 //bu sutundaki deger azaltildi bu sayede bir ust view'a gecildi
                 sutun1yeri--
+                clickCount++
             }
+            if (clickCount == maxClickCount) uyariEkrani(getString(R.string.beraberlik))
         }
         bindingGameFragment.sutun2.setOnClickListener {
             if (sutun2yeri > -1) {
@@ -369,7 +378,9 @@ class GameFragment : Fragment() {
                 tumKontroller(sutun2yeri, 1)
                 renkDegis++
                 sutun2yeri--
+                clickCount++
             }
+            if (clickCount == maxClickCount) uyariEkrani(getString(R.string.beraberlik))
         }
         bindingGameFragment.sutun3.setOnClickListener {
             if (sutun3yeri > -1) {
@@ -392,7 +403,9 @@ class GameFragment : Fragment() {
                 tumKontroller(sutun3yeri, 2)
                 renkDegis++
                 sutun3yeri--
+                clickCount++
             }
+            if (clickCount == maxClickCount) uyariEkrani(getString(R.string.beraberlik))
         }
         bindingGameFragment.sutun4.setOnClickListener {
             if (sutun4yeri > -1) {
@@ -415,7 +428,9 @@ class GameFragment : Fragment() {
                 tumKontroller(sutun4yeri, 3)
                 renkDegis++
                 sutun4yeri--
+                clickCount++
             }
+            if (clickCount == maxClickCount) uyariEkrani(getString(R.string.beraberlik))
         }
         bindingGameFragment.sutun5.setOnClickListener {
             if (sutun5yeri > -1) {
@@ -438,7 +453,9 @@ class GameFragment : Fragment() {
                 tumKontroller(sutun5yeri, 4)
                 renkDegis++
                 sutun5yeri--
+                clickCount++
             }
+            if (clickCount == maxClickCount) uyariEkrani(getString(R.string.beraberlik))
         }
         bindingGameFragment.sutun6.setOnClickListener {
             if (sutun6yeri > -1) {
@@ -461,7 +478,9 @@ class GameFragment : Fragment() {
                 tumKontroller(sutun6yeri, 5)
                 renkDegis++
                 sutun6yeri--
+                clickCount++
             }
+            if (clickCount == maxClickCount) uyariEkrani(getString(R.string.beraberlik))
         }
         bindingGameFragment.sutun7.setOnClickListener {
             if (sutun7yeri > -1) {
@@ -484,7 +503,9 @@ class GameFragment : Fragment() {
                 tumKontroller(sutun7yeri, 6)
                 renkDegis++
                 sutun7yeri--
+                clickCount++
             }
+            if (clickCount == maxClickCount) uyariEkrani(getString(R.string.beraberlik))
         }
         bindingGameFragment.sutun8.setOnClickListener {
             if (sutun8yeri > -1) {
@@ -507,7 +528,9 @@ class GameFragment : Fragment() {
                 tumKontroller(sutun8yeri, 7)
                 renkDegis++
                 sutun8yeri--
+                clickCount++
             }
+            if (clickCount == maxClickCount) uyariEkrani(getString(R.string.beraberlik))
         }
         bindingGameFragment.sutun9.setOnClickListener {
             if (sutun9yeri > -1) {
@@ -530,7 +553,9 @@ class GameFragment : Fragment() {
                 tumKontroller(sutun9yeri, 8)
                 renkDegis++
                 sutun9yeri--
+                clickCount++
             }
+            if (clickCount == maxClickCount) uyariEkrani(getString(R.string.beraberlik))
         }
         bindingGameFragment.sutun10.setOnClickListener {
             if (sutun10yeri > -1) {
@@ -553,7 +578,9 @@ class GameFragment : Fragment() {
                 tumKontroller(sutun10yeri, 9)
                 renkDegis++
                 sutun10yeri--
+                clickCount++
             }
+            if (clickCount == maxClickCount) uyariEkrani(getString(R.string.beraberlik))
         }
 
     }
@@ -948,13 +975,17 @@ class GameFragment : Fragment() {
         }.start()
     }
 
-    private fun uyariEkrani() {
+    private fun uyariEkrani(durum: String = getString(R.string.galibiyet)) {
         //oyunun bittigini gostermek icin alertdialog ile kullanici bilgilendiriliyor
         //ayni anda birden fazla kontrol dogru cikmasi ihtimaline karsi isBuilderExisting ile yalnizca 1 kez olusturulmasi saglaniyor
         isBuilderExisting = true
         val builder = AlertDialog.Builder(this@GameFragment.requireActivity())
         builder.setTitle("Tebrikler!")
         builder.setMessage("$kazananOyuncu kazandı.")
+        if (durum == getString(R.string.beraberlik)) {
+            builder.setTitle("Beraberlik!")
+            builder.setMessage("Kazanan çıkmadı.")
+        }
         builder.setCancelable(false)
         builder.setNeutralButton("Girişe Git") { _: DialogInterface?, _: Int ->
             navController.navigate(R.id.action_gameFragment_to_homeFragment)
