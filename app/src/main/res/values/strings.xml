@@ -20,4 +20,6 @@
     <string name="aciklama9">Bir oyuncu 4\'lüsünü yapınca oyun biter ve kazananın ismi yazar.</string>
     <string name="beraberlik">Beraberlik</string>
     <string name="galibiyet">Galibiyet</string>
+    <string name="player1DefaultName">Oyuncu1</string>
+    <string name="player2DefaultName">Oyuncu2</string>
 </resources>

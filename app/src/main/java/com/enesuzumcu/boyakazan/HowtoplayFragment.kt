@@ -1,4 +1,4 @@
-package com.example.boyakazan
+package com.enesuzumcu.boyakazan
 
 import android.os.Bundle
 import android.view.Gravity
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
-import com.example.boyakazan.databinding.FragmentHowtoplayBinding
+import com.enesuzumcu.boyakazan.databinding.FragmentHowtoplayBinding
 
 class HowtoplayFragment : Fragment() {
     private lateinit var bindingFragmentHowtoplay: FragmentHowtoplayBinding

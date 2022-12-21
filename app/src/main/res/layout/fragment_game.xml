@@ -29,7 +29,7 @@
             tools:background="@drawable/custom_button_black" />
 
         <TextView
-            android:id="@+id/oyuncu1AdiTextview"
+            android:id="@+id/tvPlayer1Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
@@ -39,11 +39,11 @@
             tools:text="Oyuncu 1" />
 
         <ImageView
-            android:id="@+id/oyuncu1SiraImageView"
+            android:id="@+id/ivPlayer1Turn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/oyuncu1AdiTextview"
+            app:layout_constraintStart_toEndOf="@id/tvPlayer1Name"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_baseline_arrow_left"
             tools:ignore="VectorDrawableCompat" />
@@ -61,17 +61,17 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/oyuncu2SiraImageView"
+            android:id="@+id/ivPlayer2Turn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/oyuncu2AdiTextview"
+            app:layout_constraintEnd_toStartOf="@id/tvPlayer2Name"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_baseline_arrow_right"
             tools:ignore="VectorDrawableCompat" />
 
         <TextView
-            android:id="@+id/oyuncu2AdiTextview"
+            android:id="@+id/tvPlayer2Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
@@ -107,7 +107,7 @@
             android:layout_weight="0.12">
 
             <Button
-                android:id="@+id/sutun1"
+                android:id="@+id/xAxis1"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -115,7 +115,7 @@
                 android:text="1" />
 
             <Button
-                android:id="@+id/sutun2"
+                android:id="@+id/xAxis2"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -123,7 +123,7 @@
                 android:text="2" />
 
             <Button
-                android:id="@+id/sutun3"
+                android:id="@+id/xAxis3"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -131,7 +131,7 @@
                 android:text="3" />
 
             <Button
-                android:id="@+id/sutun4"
+                android:id="@+id/xAxis4"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -139,7 +139,7 @@
                 android:text="4" />
 
             <Button
-                android:id="@+id/sutun5"
+                android:id="@+id/xAxis5"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -147,7 +147,7 @@
                 android:text="5" />
 
             <Button
-                android:id="@+id/sutun6"
+                android:id="@+id/xAxis6"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -155,7 +155,7 @@
                 android:text="6" />
 
             <Button
-                android:id="@+id/sutun7"
+                android:id="@+id/xAxis7"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -163,7 +163,7 @@
                 android:text="7" />
 
             <Button
-                android:id="@+id/sutun8"
+                android:id="@+id/xAxis8"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -171,7 +171,7 @@
                 android:text="8" />
 
             <Button
-                android:id="@+id/sutun9"
+                android:id="@+id/xAxis9"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -179,7 +179,7 @@
                 android:text="9" />
 
             <Button
-                android:id="@+id/sutun10"
+                android:id="@+id/xAxis10"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

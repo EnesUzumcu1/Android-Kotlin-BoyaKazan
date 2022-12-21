@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.boyakazan.HomeFragment"
+        android:name="com.enesuzumcu.boyakazan.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
-        android:name="com.example.boyakazan.GameFragment"
+        android:name="com.enesuzumcu.boyakazan.GameFragment"
         android:label="fragment_game"
         tools:layout="@layout/fragment_game" >
         <action
@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.example.boyakazan.SettingsFragment"
+        android:name="com.enesuzumcu.boyakazan.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" >
         <action
@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/howtoplayFragment"
-        android:name="com.example.boyakazan.HowtoplayFragment"
+        android:name="com.enesuzumcu.boyakazan.HowtoplayFragment"
         android:label="fragment_howtoplay"
         tools:layout="@layout/fragment_howtoplay" >
         <action

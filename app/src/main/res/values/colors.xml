@@ -12,4 +12,5 @@
     <color name="gray">#808080</color>
     <color name="brown">#A52A2A</color>
     <color name="lime">#00FF00</color>
+    <color name="transparent">#00FFFFFF</color>
 </resources>

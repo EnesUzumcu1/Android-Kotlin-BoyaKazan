@@ -146,7 +146,6 @@
             tools:background="@drawable/custom_button_black" />
 
         <TextView
-            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Oyuncu 1 Rengi →"
@@ -300,7 +299,6 @@
         <!-- app:layout_constrainedWidth="true" bu komut sayesinde view ekran disina cikmiyor.
          textview yazısı asagi satıra kayiyor  -->
         <TextView
-            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="← Oyuncu 2 Rengi"
@@ -314,7 +312,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-        android:id="@+id/kaydetButon"
+        android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"

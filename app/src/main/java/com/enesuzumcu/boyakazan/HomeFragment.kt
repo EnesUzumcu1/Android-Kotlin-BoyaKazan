@@ -1,21 +1,22 @@
-package com.example.boyakazan
+package com.enesuzumcu.boyakazan
 
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.addCallback
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
-import com.example.boyakazan.databinding.FragmentHomeBinding
+import com.enesuzumcu.boyakazan.databinding.FragmentHomeBinding
+import com.enesuzumcu.boyakazan.model.Player
 
 class HomeFragment : Fragment() {
     private lateinit var bindingFragmentHome: FragmentHomeBinding
     private lateinit var navController: NavController
-    private var geriTusuBasilisSuresi: Long = 0
+    private var backPressTime: Long = 0
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -47,25 +48,36 @@ class HomeFragment : Fragment() {
     }
 
     private fun tanimlamalar() {
-        val arkaplan: Drawable = bindingFragmentHome.enGenisLayout.background
-        arkaplan.alpha = 50
+        bindingFragmentHome.enGenisLayout.background.alpha = 50
         navController = findNavController()
+        if (Player.player1 == null) {
+            Player.setPlayer1(
+                name = getString(R.string.player1DefaultName),
+                color = ContextCompat.getColor(requireContext(), R.color.black)
+            )
+        }
+        if (Player.player2 == null) {
+            Player.setPlayer2(
+                name = getString(R.string.player2DefaultName),
+                color = ContextCompat.getColor(requireContext(), R.color.red)
+            )
+        }
     }
 
     private fun onBackPressed() {
         //backpress toplamda 2 saniyeden uzun sure basilirsa uygulama kapanmasi saglandi
-        val geriTusuToast: Toast = Toast.makeText(
+        val toast: Toast = Toast.makeText(
             this@HomeFragment.requireActivity(),
             "Uygulamadan çıkmak için bir daha tıklayın.",
             Toast.LENGTH_SHORT
         )
-        if (geriTusuBasilisSuresi + 2000 > System.currentTimeMillis()) {
-            geriTusuToast.cancel()
+        if (backPressTime + 2000 > System.currentTimeMillis()) {
+            toast.cancel()
             requireActivity().finish()
         } else {
-            geriTusuToast.show()
+            toast.show()
         }
-        geriTusuBasilisSuresi = System.currentTimeMillis()
+        backPressTime = System.currentTimeMillis()
     }
 
 }

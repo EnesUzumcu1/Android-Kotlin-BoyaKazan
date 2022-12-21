@@ -1,4 +1,4 @@
-package com.example.boyakazan;
+package com.enesuzumcu.boyakazan;
 
 import org.junit.Test;
 
