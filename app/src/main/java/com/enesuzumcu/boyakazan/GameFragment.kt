@@ -191,10 +191,10 @@ class GameFragment : Fragment() {
                 //player2
                 koordinatlar[yAxis][xAxis].setBackgroundColor(Player.player2?.color!!)
             }
+            showNextPlayer(currentPlayer)
+            allControls(yAxis, xAxis)
             //currentPlayer degistirildi bu sayede diger oyuncuya sira gecmis oldu
             currentPlayer = currentPlayer.not()
-            allControls(yAxis, xAxis)
-            showNextPlayer(currentPlayer)
 
             clickCount++
             if (clickCount == maxClickCount) showAlertDialog(getString(R.string.beraberlik))
@@ -570,13 +570,13 @@ class GameFragment : Fragment() {
         //bir oyuncu kazandigi zaman 10 adet viewin bulundugu viewler gizleniyor
         bindingGameFragment.butonlarSatiri.visibility = View.INVISIBLE
         bindingGameFragment.buttonGeriAl.visibility = View.INVISIBLE
-        showNextPlayer(currentPlayer)
+        showNextPlayer(currentPlayer.not())
         winEffect(coordinates)
     }
 
     private fun winEffect(coordinate: Array<IntArray>) {
         //kazanan oyuncunun nasil kazandigini gostermek icin kazandigi kosullardaki viewler yanip sonme efekti ile gosteriliyor
-        val winnerColor = if (currentPlayer.not()) {
+        val winnerColor = if (currentPlayer) {
             Player.player1?.color!!
         } else {
             Player.player2?.color!!

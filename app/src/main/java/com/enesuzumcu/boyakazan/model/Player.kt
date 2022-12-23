@@ -1,10 +1,6 @@
 package com.enesuzumcu.boyakazan.model
 
-import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
-
-@Parcelize
-data class Player(var name: String, var color: Int) : Parcelable{
+data class Player(var name: String, var color: Int){
     companion object {
         var player1 : Player? = null
         var player2 : Player? = null
